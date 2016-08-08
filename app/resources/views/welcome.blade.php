@@ -30,6 +30,10 @@
             background-position: center;
         }
 
+        .page-register {
+            margin-top: 0px !important;
+        }
+
         @media only screen and (max-width : 992px) {
             .parallax-container .section {
                 position: absolute;
@@ -82,6 +86,71 @@
             </div>
         </div>
     </div>
+
+    <div id="register" class="page-register default_color scrollspy">
+        <div class="container">  
+            <div class="row">
+                <div class="col s12">
+                    <form class="col s12" action="contact.php" method="post">
+                        <h3 class="center white-text">Registro</h3>
+                        <hr>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix white-text">account_circle</i>
+                                <input id="icon_prefix" name="name" type="text" class="validate white-text">
+                                <label for="icon_prefix" class="white-text">Nombre</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix white-text">email</i>
+                                <input id="icon_email" name="email" type="email" class="validate white-text">
+                                <label for="icon_email" class="white-text">Correo</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix white-text">phone</i>
+                                <input id="icon_prefix2" name="message" type="text" class="validate white-text"></input>
+                                <label for="icon_prefix2" class="white-text">Telefono</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix white-text">grade</i>
+                                <select class="validate white-text" id="icon_semester">
+                                  <option value="" disabled selected>Choose your option</option>
+                                  <option value="1">Option 1</option>
+                                  <option value="2">Option 2</option>
+                                  <option value="3">Option 3</option>
+                                </select>
+                                <label for="icon_semester" class="white-text">Semestre</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix white-text">dns</i>
+                                <select class="validate white-text" id="icon_plan">
+                                  <option value="" disabled selected>Choose your option</option>
+                                  <option value="1">Option 1</option>
+                                  <option value="2">Option 2</option>
+                                  <option value="3">Option 3</option>
+                                </select>
+                                <label for="icon_plan" class="white-text">Plan</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix white-text">sort_by_alpha</i>
+                                <input id="icon_course" name="message" type="text" class="validate white-text"></input>
+                                <label for="icon_course" class="white-text">Curso</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix white-text">person_pin</i>
+                                <input id="icon_code" name="message" type="text" class="validate white-text"></input>
+                                <label for="icon_code" class="white-text">Codigo</label>
+                            </div>
+                            {{-- <div class="col offset-s7 s5">
+                                <button class="btn waves-effect waves-light red darken-1" type="submit">Submit
+                                    <i class="mdi-content-send right white-text"></i>
+                                </button>
+                            </div> --}}
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     
     {!! Html::script('js/jquery-3.1.0.min.js') !!}
     {!! Html::script('js/jquery-migrate-1.4.1.min.js') !!}
@@ -89,7 +158,7 @@
     <script>
         $(".button-collapse").sideNav();
         $('.scrollspy').scrollSpy();
-        $('.parallax').parallax();
+        $('select').material_select();
     </script>
 </body>
 </html>
