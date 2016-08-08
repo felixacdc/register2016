@@ -32,6 +32,13 @@
 
         .page-register {
             margin-top: 0px !important;
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        .title-class {
+            margin-bottom: 55px;
+            margin-top: 35px;
         }
 
         @media only screen and (max-width : 992px) {
@@ -80,7 +87,7 @@
                     <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
                 </div>
                 <div class="row center">
-                    <a href="#register" class="btn-large waves-effect waves-light default_color">Registrate</a>
+                    <a href="#register" class="btn-large waves-effect waves-light red">Registrate</a>
                 </div>
                 <br><br>
             </div>
@@ -91,34 +98,31 @@
         <div class="container">  
             <div class="row">
                 <div class="col s12">
-                    <form class="col s12" action="contact.php" method="post">
-                        <h3 class="center white-text">Registro</h3>
-                        <hr>
+                    {!! Form::open(['url' => 'register', 'method' => 'POST', 'class' => 'col s12']) !!}
+                        <div class="title-class">
+                            <h3 class="center white-text">Registro</h3>
+                            <hr>
+                        </div>
                         <div class="row">
                             <div class="input-field col s12">
                                 <i class="material-icons prefix white-text">account_circle</i>
-                                <input id="icon_prefix" name="name" type="text" class="validate white-text">
-                                <label for="icon_prefix" class="white-text">Nombre</label>
+                                {!! Form::text('name', null, ['class' => 'validate while-text', 'id' => 'name', 'required' => 'required']) !!}
+                                {!! Form::label('name', 'Nombre', ['class' => 'white-text']) !!}
                             </div>
                             <div class="input-field col s12">
                                 <i class="material-icons prefix white-text">email</i>
-                                <input id="icon_email" name="email" type="email" class="validate white-text">
-                                <label for="icon_email" class="white-text">Correo</label>
+                                {!! Form::email('email', null, ['class' => 'validate while-text', 'id' => 'email', 'required' => 'required']) !!}
+                                {!! Form::label('email', 'Correo electronico', ['class' => 'white-text']) !!}
                             </div>
                             <div class="input-field col s12">
                                 <i class="material-icons prefix white-text">phone</i>
-                                <input id="icon_prefix2" name="message" type="text" class="validate white-text"></input>
-                                <label for="icon_prefix2" class="white-text">Telefono</label>
+                                {!! Form::text('phone', null, ['class' => 'validate while-text', 'id' => 'phone', 'required' => 'required']) !!}
+                                {!! Form::label('phone', 'Telefono', ['class' => 'white-text']) !!}
                             </div>
                             <div class="input-field col s12">
                                 <i class="material-icons prefix white-text">grade</i>
-                                <select class="validate white-text" id="icon_semester">
-                                  <option value="" disabled selected>Choose your option</option>
-                                  <option value="1">Option 1</option>
-                                  <option value="2">Option 2</option>
-                                  <option value="3">Option 3</option>
-                                </select>
-                                <label for="icon_semester" class="white-text">Semestre</label>
+                                {!! Form::select('semester', config('semester'), null, ['class' => 'validate white-text', 'id' => 'semester', 'required' => 'required']) !!}
+                                {!! Form::label('semester', 'Semestre', ['class' => 'white-text']) !!}
                             </div>
                             <div class="input-field col s12">
                                 <i class="material-icons prefix white-text">dns</i>
@@ -140,13 +144,13 @@
                                 <input id="icon_code" name="message" type="text" class="validate white-text"></input>
                                 <label for="icon_code" class="white-text">Codigo</label>
                             </div>
-                            {{-- <div class="col offset-s7 s5">
-                                <button class="btn waves-effect waves-light red darken-1" type="submit">Submit
-                                    <i class="mdi-content-send right white-text"></i>
+                            <div class="col s12 right-align">
+                                <button class="btn waves-effect waves-light red darken-1" type="submit">Enviar
+                                    <i class="material-icons right white-text">playlist_add</i>
                                 </button>
-                            </div> --}}
+                            </div>
                         </div>
-                    </form>
+                    {!! Form::close() !!}
                 </div>
             </div>
         </div>
