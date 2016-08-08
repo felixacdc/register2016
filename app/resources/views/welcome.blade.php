@@ -8,71 +8,7 @@
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     {!! Html::style('css/materialize.css') !!}
-    <style>
-        .default_color{background-color: #2196F3 !important}
-        .default_color_text{color: #2196F3 !important}
-
-        .parallax-container {
-            position: static;
-            min-height: 380px;
-            height: auto;
-            color: rgba(255,255,255,.9);
-        }
-        .parallax-container .section {
-            width: 100%;
-        }
-
-        #index-banner {
-            background-image: url(/imgs/background1.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-attachment: fixed;
-            background-position: center;
-        }
-
-        .page-register {
-            margin-top: 0px !important;
-            padding-top: 40px;
-            padding-bottom: 40px;
-        }
-
-        .title-class {
-            margin-bottom: 55px;
-            margin-top: 35px;
-        }
-
-        .while-text {
-            color: #fff !important;
-        }
-
-        .input-field div.error {
-            position: relative;
-            top: -1rem;
-            left: 0rem;
-            color: #F44336;
-            text-align: right;
-        }
-
-        .caret {
-            color: #fff !important!;
-        }
-
-        @media only screen and (max-width : 992px) {
-            .parallax-container .section {
-                position: absolute;
-                top: 40%;
-            }
-            #index-banner .section {
-                top: 5%;
-            }
-        }
-
-        @media only screen and (max-width : 600px) {
-            #index-banner .section {
-                top: 0;
-            }
-        }
-    </style>
+    {!! Html::style('css/styles.css') !!}
 </head>
 <body id="top" class="scrollspy">
     <div class="navbar-fixed">
@@ -122,37 +58,35 @@
                         <div class="row">
                             <div class="input-field col s12">
                                 <i class="material-icons prefix white-text">account_circle</i>
-                                {!! Form::text('name', null, ['class' => 'validate while-text', 'id' => 'name', 'required' => 'required']) !!}
+                                {!! Form::text('name', null, ['class' => 'validate while-text', 'autocomplete' => 'off']) !!}
                                 {!! Form::label('name', 'Nombre', ['class' => 'validate white-text']) !!}
                             </div>
                             <div class="input-field col s12">
                                 <i class="material-icons prefix white-text">email</i>
-                                {!! Form::email('email', null, ['class' => 'validate while-text', 'id' => 'email', 'required' => 'required']) !!}
+                                {!! Form::email('email', null, ['class' => 'validate while-text', 'autocomplete' => 'off']) !!}
                                 {!! Form::label('email', 'Correo electronico', ['class' => 'white-text']) !!}
                             </div>
                             <div class="input-field col s12">
                                 <i class="material-icons prefix white-text">phone</i>
-                                {!! Form::text('phone', null, ['class' => 'validate while-text', 'id' => 'phone', 'required' => 'required']) !!}
+                                {!! Form::text('phone', null, ['class' => 'validate while-text', 'autocomplete' => 'off']) !!}
                                 {!! Form::label('phone', 'Telefono', ['class' => 'white-text']) !!}
                             </div>
-                            <div class="input-field col s12">
-                                <i class="material-icons prefix white-text">grade</i>
-                                {!! Form::select('semester', config('semester'), null, ['class' => 'white-text', 'id' => 'semester', 'required' => 'required']) !!}
-                                {!! Form::label('semester', 'Semestre', ['class' => 'white-text']) !!}
+                            <div class="input-select col s12">
+                                <i class="material-icons white-text">polymer</i>
+                                {!! Form::select('semester', config('semester'), null, ['class' => 'browser-default', 'required' => 'required']) !!}
                             </div>
-                            <div class="input-field col s12">
-                                <i class="material-icons prefix white-text">dns</i>
-                                {!! Form::select('plan', config('plan'), null, ['class' => 'white-text', 'id' => 'plan', 'required' => 'required']) !!}
-                                {!! Form::label('plan', 'Plan', ['class' => 'white-text']) !!}
+                            <div class="input-select col s12">
+                                <i class="material-icons white-text">dns</i>
+                                {!! Form::select('plan', config('plan'), null, ['class' => 'white-text browser-default', 'required' => 'required']) !!}
                             </div>
                             <div class="input-field col s12">
                                 <i class="material-icons prefix white-text">sort_by_alpha</i>
-                                {!! Form::text('course', null, ['class' => 'validate while-text', 'id' => 'course', 'required' => 'required', 'autocomplete' => 'off']) !!}
+                                {!! Form::text('course', null, ['class' => 'validate while-text', 'autocomplete' => 'off']) !!}
                                 {!! Form::label('course', 'Curso', ['class' => 'white-text']) !!}
                             </div>
                             <div class="input-field col s12">
                                 <i class="material-icons prefix white-text">person_pin</i>
-                                {!! Form::text('code', null, ['class' => 'validate while-text', 'id' => 'code', 'required' => 'required', 'autocomplete' => 'off']) !!}
+                                {!! Form::text('code', null, ['class' => 'validate while-text', 'autocomplete' => 'off']) !!}
                                 {!! Form::label('code', 'Codigo', ['class' => 'white-text']) !!}
                             </div>
                             <div class="col s12 right-align">
@@ -171,46 +105,6 @@
     {!! Html::script('js/jquery-migrate-1.4.1.min.js') !!}
     {!! Html::script('js/materialize.min.js') !!}
     {!! Html::script('js/jquery.validate.js') !!}
-    <script>
-        $(".button-collapse").sideNav();
-        $('.scrollspy').scrollSpy();
-        $('select').material_select();
-
-         $("#formValidate").validate({
-            rules: {
-                name: {
-                    required: true
-                },
-                email: {
-                    required: true,
-                    email:true
-                },
-                semester: {
-                    required: true
-                }
-            },
-            messages: {
-                name:{
-                    required: "Ingrese el nombre"
-                },
-                email: {
-                    required: "Ingrese el correo electronico",
-                    email: "Ingrese un correo electronico valido"
-                },
-                semester: {
-                    required: "Seleccione un semestre"
-                }
-            },
-            errorElement : 'div',
-            errorPlacement: function(error, element) {
-              var placement = $(element).data('error');
-              if (placement) {
-                $(placement).append(error)
-              } else {
-                error.insertAfter(element);
-              }
-            }
-         });
-    </script>
+    {!! Html::script('js/scripts.js') !!}
 </body>
 </html>
