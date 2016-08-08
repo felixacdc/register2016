@@ -5636,7 +5636,7 @@ input[type=search],
 textarea.materialize-textarea {
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid #9e9e9e;
+  border-bottom: 1px solid #F1FAF5;
   border-radius: 0;
   outline: none;
   height: 3rem;
@@ -5720,8 +5720,8 @@ input[type=tel]:focus:not([readonly]),
 input[type=number]:focus:not([readonly]),
 input[type=search]:focus:not([readonly]),
 textarea.materialize-textarea:focus:not([readonly]) {
-  border-bottom: 1px solid #26a69a;
-  box-shadow: 0 1px 0 0 #26a69a;
+  border-bottom: 1px solid #B6D1C2;
+  box-shadow: 0 1px 0 0 #B6D1C2;
 }
 
 input:not([type]):focus:not([readonly]) + label,
@@ -5737,7 +5737,7 @@ input[type=tel]:focus:not([readonly]) + label,
 input[type=number]:focus:not([readonly]) + label,
 input[type=search]:focus:not([readonly]) + label,
 textarea.materialize-textarea:focus:not([readonly]) + label {
-  color: #26a69a;
+  color: #B6D1C2;
 }
 
 input:not([type]).valid, input:not([type]):focus.valid,
@@ -5765,8 +5765,8 @@ input[type=search].valid,
 input[type=search]:focus.valid,
 textarea.materialize-textarea.valid,
 textarea.materialize-textarea:focus.valid {
-  border-bottom: 1px solid #4CAF50;
-  box-shadow: 0 1px 0 0 #4CAF50;
+  border-bottom: 1px solid #fff;
+  box-shadow: 0 1px 0 0 #fff;
 }
 
 input:not([type]).valid + label:after,
@@ -6489,7 +6489,7 @@ select {
   cursor: pointer;
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid #9e9e9e;
+  border-bottom: 1px solid #F1FAF5;
   outline: none;
   height: 3rem;
   line-height: 3rem;
@@ -6501,7 +6501,7 @@ select {
 }
 
 .select-wrapper span.caret {
-  color: initial;
+  color: #fff;
   position: absolute;
   right: 0;
   top: 16px;

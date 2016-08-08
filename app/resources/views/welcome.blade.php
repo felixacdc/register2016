@@ -41,6 +41,22 @@
             margin-top: 35px;
         }
 
+        .while-text {
+            color: #fff !important;
+        }
+
+        .input-field div.error {
+            position: relative;
+            top: -1rem;
+            left: 0rem;
+            color: #F44336;
+            text-align: right;
+        }
+
+        .caret {
+            color: #fff !important!;
+        }
+
         @media only screen and (max-width : 992px) {
             .parallax-container .section {
                 position: absolute;
@@ -98,7 +114,7 @@
         <div class="container">  
             <div class="row">
                 <div class="col s12">
-                    {!! Form::open(['url' => 'register', 'method' => 'POST', 'class' => 'col s12']) !!}
+                    {!! Form::open(['url' => 'register', 'method' => 'POST', 'class' => 'col s12', 'id' => 'formValidate']) !!}
                         <div class="title-class">
                             <h3 class="center white-text">Registro</h3>
                             <hr>
@@ -107,7 +123,7 @@
                             <div class="input-field col s12">
                                 <i class="material-icons prefix white-text">account_circle</i>
                                 {!! Form::text('name', null, ['class' => 'validate while-text', 'id' => 'name', 'required' => 'required']) !!}
-                                {!! Form::label('name', 'Nombre', ['class' => 'white-text']) !!}
+                                {!! Form::label('name', 'Nombre', ['class' => 'validate white-text']) !!}
                             </div>
                             <div class="input-field col s12">
                                 <i class="material-icons prefix white-text">email</i>
@@ -121,28 +137,23 @@
                             </div>
                             <div class="input-field col s12">
                                 <i class="material-icons prefix white-text">grade</i>
-                                {!! Form::select('semester', config('semester'), null, ['class' => 'validate white-text', 'id' => 'semester', 'required' => 'required']) !!}
+                                {!! Form::select('semester', config('semester'), null, ['class' => 'white-text', 'id' => 'semester', 'required' => 'required']) !!}
                                 {!! Form::label('semester', 'Semestre', ['class' => 'white-text']) !!}
                             </div>
                             <div class="input-field col s12">
                                 <i class="material-icons prefix white-text">dns</i>
-                                <select class="validate white-text" id="icon_plan">
-                                  <option value="" disabled selected>Choose your option</option>
-                                  <option value="1">Option 1</option>
-                                  <option value="2">Option 2</option>
-                                  <option value="3">Option 3</option>
-                                </select>
-                                <label for="icon_plan" class="white-text">Plan</label>
+                                {!! Form::select('plan', config('plan'), null, ['class' => 'white-text', 'id' => 'plan', 'required' => 'required']) !!}
+                                {!! Form::label('plan', 'Plan', ['class' => 'white-text']) !!}
                             </div>
                             <div class="input-field col s12">
                                 <i class="material-icons prefix white-text">sort_by_alpha</i>
-                                <input id="icon_course" name="message" type="text" class="validate white-text"></input>
-                                <label for="icon_course" class="white-text">Curso</label>
+                                {!! Form::text('course', null, ['class' => 'validate while-text', 'id' => 'course', 'required' => 'required', 'autocomplete' => 'off']) !!}
+                                {!! Form::label('course', 'Curso', ['class' => 'white-text']) !!}
                             </div>
                             <div class="input-field col s12">
                                 <i class="material-icons prefix white-text">person_pin</i>
-                                <input id="icon_code" name="message" type="text" class="validate white-text"></input>
-                                <label for="icon_code" class="white-text">Codigo</label>
+                                {!! Form::text('code', null, ['class' => 'validate while-text', 'id' => 'code', 'required' => 'required', 'autocomplete' => 'off']) !!}
+                                {!! Form::label('code', 'Codigo', ['class' => 'white-text']) !!}
                             </div>
                             <div class="col s12 right-align">
                                 <button class="btn waves-effect waves-light red darken-1" type="submit">Enviar
@@ -159,10 +170,47 @@
     {!! Html::script('js/jquery-3.1.0.min.js') !!}
     {!! Html::script('js/jquery-migrate-1.4.1.min.js') !!}
     {!! Html::script('js/materialize.min.js') !!}
+    {!! Html::script('js/jquery.validate.js') !!}
     <script>
         $(".button-collapse").sideNav();
         $('.scrollspy').scrollSpy();
         $('select').material_select();
+
+         $("#formValidate").validate({
+            rules: {
+                name: {
+                    required: true
+                },
+                email: {
+                    required: true,
+                    email:true
+                },
+                semester: {
+                    required: true
+                }
+            },
+            messages: {
+                name:{
+                    required: "Ingrese el nombre"
+                },
+                email: {
+                    required: "Ingrese el correo electronico",
+                    email: "Ingrese un correo electronico valido"
+                },
+                semester: {
+                    required: "Seleccione un semestre"
+                }
+            },
+            errorElement : 'div',
+            errorPlacement: function(error, element) {
+              var placement = $(element).data('error');
+              if (placement) {
+                $(placement).append(error)
+              } else {
+                error.insertAfter(element);
+              }
+            }
+         });
     </script>
 </body>
 </html>
