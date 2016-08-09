@@ -12,3 +12,5 @@
 */
 
 Route::get('/', 'RegisterController@index');
+Route::post('verify_code', 'RegisterController@verify_code');
+Route::post('register', 'RegisterController@store');

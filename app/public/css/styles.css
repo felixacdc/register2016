@@ -85,6 +85,14 @@
     text-align: right;
 }
 
+#messageError {
+    position: relative;
+    top: -1rem;
+    left: 0rem;
+    color: #F44336;
+    text-align: right;
+}
+
 @media only screen and (max-width : 992px) {
     .parallax-container .section {
         position: absolute;

@@ -8,7 +8,7 @@ class Code extends Model
 {
     protected $table = 'codes';
 
-    protected $fillable = ['code'];
+    protected $fillable = ['code', 'state'];
 
     public $relations = [
         'people'

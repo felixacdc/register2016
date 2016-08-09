@@ -47,11 +47,12 @@
     </div>
 
     <div id="register" class="page-register default_color scrollspy">
-        <div class="container">  
+        <div class="container">
             <div class="row">
                 <div class="col s12">
                     {!! Form::open(['url' => 'register', 'method' => 'POST', 'class' => 'col s12', 'id' => 'formValidate']) !!}
-                        <div class="title-class">
+                        <input type="hidden" name="token" id="token" value="{{ csrf_token() }}">
+                        <div class="title-class col s6 offset-s3">
                             <h3 class="center white-text">Registro</h3>
                             <hr>
                         </div>
@@ -86,7 +87,8 @@
                             </div>
                             <div class="input-field col s12">
                                 <i class="material-icons prefix white-text">person_pin</i>
-                                {!! Form::text('code', null, ['class' => 'validate while-text', 'autocomplete' => 'off']) !!}
+                                {!! Form::text('code', null, ['class' => 'validate while-text', 'id' => 'code', 'autocomplete' => 'off']) !!}
+                                <div id="messageError"></div>
                                 {!! Form::label('code', 'Codigo', ['class' => 'white-text']) !!}
                             </div>
                             <div class="col s12 right-align">
@@ -100,11 +102,12 @@
             </div>
         </div>
     </div>
-    
+
     {!! Html::script('js/jquery-3.1.0.min.js') !!}
     {!! Html::script('js/jquery-migrate-1.4.1.min.js') !!}
     {!! Html::script('js/materialize.min.js') !!}
     {!! Html::script('js/jquery.validate.js') !!}
+    {!! Html::script('js/scripts.classes.js') !!}
     {!! Html::script('js/scripts.js') !!}
 </body>
 </html>
