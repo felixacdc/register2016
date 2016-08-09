@@ -8,7 +8,18 @@ function optionSemester(value, element, param) {
     }
 }
 
+function optionPlan(value, element, param) {
+    var options = ['Diario', 'Fin de Semana'];
+
+    if ( options.indexOf(value) >= 0 ) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 $.validator.addMethod("optionSemester", optionSemester, "Seleccione un semestre correcto.");
+$.validator.addMethod("optionPlan", optionPlan, "Seleccione un plan correcto.");
 
 function injectTrim(handler) {
     return function (element, event) {
@@ -40,6 +51,15 @@ $('select').material_select();
         },
         semester: {
             optionSemester: true
+        },
+        plan: {
+            optionPlan: true
+        },
+        course: {
+            required: true
+        },
+        code: {
+            required: true
         }
     },
     messages: {
@@ -55,7 +75,16 @@ $('select').material_select();
             minlength: "Escriba al menos 8 caracteres."
         },
         semester: {
-            required: "Seleccione el semestre"
+            required: "Seleccione el semestre."
+        },
+        plan: {
+            required: "Seleccione un plan."
+        },
+        course: {
+            required: "Escriba un curso."
+        },
+        code: {
+            required: "Escriba un codigo."
         }
     },
     errorElement : 'div',

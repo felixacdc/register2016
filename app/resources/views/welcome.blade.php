@@ -58,12 +58,12 @@
                         <div class="row">
                             <div class="input-field col s12">
                                 <i class="material-icons prefix white-text">account_circle</i>
-                                {!! Form::text('name', null, ['class' => 'validate while-text', 'autocomplete' => 'off']) !!}
+                                {!! Form::text('name', null, ['class' => 'validate while-text', 'id' => 'name', 'autocomplete' => 'off']) !!}
                                 {!! Form::label('name', 'Nombre', ['class' => 'validate white-text']) !!}
                             </div>
                             <div class="input-field col s12">
                                 <i class="material-icons prefix white-text">email</i>
-                                {!! Form::email('email', null, ['class' => 'validate while-text', 'autocomplete' => 'off']) !!}
+                                {!! Form::text('email', null, ['class' => 'validate while-text', 'autocomplete' => 'off']) !!}
                                 {!! Form::label('email', 'Correo electronico', ['class' => 'white-text']) !!}
                             </div>
                             <div class="input-field col s12">
