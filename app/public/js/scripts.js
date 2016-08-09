@@ -2,7 +2,7 @@
 
 $.validator.addMethod("optionSemester", optionSemester, "Seleccione un semestre correcto.");
 $.validator.addMethod("optionPlan", optionPlan, "Seleccione un plan correcto.");
-
+$.validator.addMethod("emailVal", emailVal, "Escriba un correo electronico valido.");
 
 $(document).ready(function() {
 
@@ -21,7 +21,7 @@ $(document).ready(function() {
             },
             email: {
                 required: true,
-                email:true
+                emailVal: true
             },
             phone: {
                 required: true,
@@ -45,8 +45,7 @@ $(document).ready(function() {
                 required: "Escriba el nombre."
             },
             email: {
-                required: "Escriba el correo electronico.",
-                email: "Escriba un correo electronico valido."
+                required: "Escriba el correo electronico."
             },
             phone: {
                 required: "Escriba el telefono.",
@@ -112,6 +111,17 @@ $(document).ready(function() {
          return false;
      }
  }
+
+// validar email
+function emailVal(value, element, param) {
+    var exp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
+
+    if ( $(element).attr("value").match(exp) ) {
+        return true;
+    } else {
+        return false;
+    }
+}
 
 function injectTrim(handler) {
     return function (element, event) {
