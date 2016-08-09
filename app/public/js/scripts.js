@@ -9,6 +9,8 @@ $(document).ready(function() {
     $(".button-collapse").sideNav();
     $('.scrollspy').scrollSpy();
 
+    Materialize.toast(success, 4000);
+
     $("#code").keydown(function() {
         $('#messageError').css('display', 'none');
     });

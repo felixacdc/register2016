@@ -11,6 +11,9 @@
     {!! Html::style('css/styles.css') !!}
 </head>
 <body id="top" class="scrollspy">
+    <script type="text/javascript">
+        var success = '<?php echo 'Mi mensaje perros' ?>';
+      </script>
     <div class="navbar-fixed">
         <nav class="default_color" role="navigation">
             <div class="container">
@@ -109,5 +112,6 @@
     {!! Html::script('js/jquery.validate.js') !!}
     {!! Html::script('js/scripts.classes.js') !!}
     {!! Html::script('js/scripts.js') !!}
+
 </body>
 </html>
