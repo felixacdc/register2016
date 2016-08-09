@@ -9,7 +9,16 @@ $(document).ready(function() {
     $(".button-collapse").sideNav();
     $('.scrollspy').scrollSpy();
 
-    Materialize.toast(success, 4000);
+    if ( typeof(success) != "undefined" ) Materialize.toast(success, 4000);
+    if ( typeof(error) != "undefined" ) Materialize.toast(error, 4000);
+    if ( typeof(errors) != "undefined" ) {
+        var content = '<ul>';
+        $.each(errors, function( index, value ) {
+            content += '<li>' + value + '</li>';
+        });
+        content += '</li>';
+        Materialize.toast(content, 4000);
+    }
 
     $("#code").keydown(function() {
         $('#messageError').css('display', 'none');

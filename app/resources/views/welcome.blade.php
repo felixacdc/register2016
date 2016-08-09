@@ -11,9 +11,7 @@
     {!! Html::style('css/styles.css') !!}
 </head>
 <body id="top" class="scrollspy">
-    <script type="text/javascript">
-        var success = '<?php echo 'Mi mensaje perros' ?>';
-      </script>
+    @include('alerts')
     <div class="navbar-fixed">
         <nav class="default_color" role="navigation">
             <div class="container">
