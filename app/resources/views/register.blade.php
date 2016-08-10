@@ -1,4 +1,4 @@
-<div id="register" class="page-register default_color scrollspy">
+<div class="page-register default_color">
     <div class="container">
         <div class="row">
             <div class="col s12">
@@ -6,7 +6,7 @@
                     <input type="hidden" name="token" id="token" value="{{ csrf_token() }}">
                     <div class="title-class col s6 offset-s3">
                         <h3 class="center white-text">Registro</h3>
-                        <hr>
+                        <hr style="border: .5px solid #fff;" class="scrollspy" id="register">
                     </div>
                     <div class="row">
                         <div class="input-field col s12">

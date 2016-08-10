@@ -36,6 +36,7 @@ $(document).ready(function() {
             },
             phone: {
                 required: true,
+                digits: true,
                 minlength: 8
             },
             semester: {
@@ -60,6 +61,7 @@ $(document).ready(function() {
             },
             phone: {
                 required: "Escriba el telefono.",
+                digits: "Escriba solo numeros.",
                 minlength: "Escriba al menos 8 caracteres."
             },
             semester: {

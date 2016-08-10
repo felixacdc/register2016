@@ -16,7 +16,8 @@ class RegisterController extends Controller
 
     public function index()
     {
-        return view('welcome');
+        $people = People::all();
+        return view('welcome', compact('people'));
     }
 
     public function verify_code(Request $request)
