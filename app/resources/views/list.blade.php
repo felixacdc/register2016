@@ -2,10 +2,10 @@
     <div class="container">
         <div class="row">
             <div class="title-class col s6 offset-s3">
-                <h3 class="center text_b">Registro</h3>
-                <hr style="border: .5px solid #2196f3;" class="scrollspy" id="registered">
+                <h3 class="center text_b wow bounceInLeft">Registro</h3>
+                <hr style="border: .5px solid #2196f3;" class="scrollspy wow bounceInRight" id="registered">
             </div>
-            <div class="col s12">
+            <div class="col s12 wow fadeInDown">
                 <table class="striped responsive-table">
                     <thead>
                         <tr>

@@ -6,6 +6,8 @@ $.validator.addMethod("emailVal", emailVal, "Escriba un correo electronico valid
 
 $(document).ready(function() {
 
+    (new WOW).init();
+
     $(".button-collapse").sideNav();
     $('.scrollspy').scrollSpy();
 
