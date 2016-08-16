@@ -2,8 +2,9 @@
     <div class="container">
         <div class="row">
             <div class="col l6 s12 wow fadeInLeft">
-                <h5 class="white-text">Ingenieria en sistemas</h5>
-                <p class="grey-text text-lighten-4">Convención.</p>
+                <h5 class="white-text">Ingeniería en sistemas</h5>
+                <p class="grey-text text-lighten-4">Convención de informática.</p>
+                <p class="grey-text text-lighten-4">Oracle y otras bases de datos.</p>
             </div>
             <div class="col l4 offset-l2 s12 wow fadeInRight">
                 <h5 class="white-text">Redes</h5>

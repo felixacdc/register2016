@@ -2,7 +2,7 @@
     <nav class="default_color" role="navigation">
         <div class="container">
             <div class="nav-wrapper">
-                <a href="#top" class="brand-logo">Logo</a>
+                <a href="#top" class="brand-logo">Ingeniería</a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="#register">Registrar</a></li>

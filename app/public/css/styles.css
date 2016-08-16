@@ -12,11 +12,11 @@
 }
 
 #index-banner {
-    background-image: url(/imgs/background1.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+    background-image: url(/imgs/background1.png);
+    background-size: 100% 85%;
     background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .page-register {
