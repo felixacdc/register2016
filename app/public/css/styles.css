@@ -115,9 +115,10 @@
     #index-banner {
         background-image: url(/imgs/banner2.jpg);
         background-size: 100%;
+        background-position: center 30%;
     }
 
     .parallax-container {
-        height: 400px;
+        height: 300px;
     }
 }
