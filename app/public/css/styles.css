@@ -2,9 +2,8 @@
 .default_color_text{color: #2196F3 !important}
 
 .parallax-container {
-    position: static;
-    min-height: 380px;
-    height: auto;
+    position: relative;
+    height: 700px;
     color: rgba(255,255,255,.9);
 }
 .parallax-container .section {
@@ -12,8 +11,8 @@
 }
 
 #index-banner {
-    background-image: url(/imgs/background1.png);
-    background-size: 100% 85%;
+    background-image: url(/imgs/banner.jpg);
+    background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -109,5 +108,16 @@
 @media only screen and (max-width : 600px) {
     #index-banner .section {
         top: 0;
+    }
+}
+
+@media only screen and (max-width: 550px) { 
+    #index-banner {
+        background-image: url(/imgs/banner2.jpg);
+        background-size: 100%;
+    }
+
+    .parallax-container {
+        height: 400px;
     }
 }
