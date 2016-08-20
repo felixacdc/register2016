@@ -27,7 +27,7 @@ class PeopleRequest extends Request
             'name'      => 'required',
             'email'     => 'required|email',
             'phone'     => 'required|min:8',
-            'semester'  => 'required|in:Primero,Segundo,Tercero,Cuarto,Quinto,Sexto,Septimo,Octabo,Noveno,Decimo,Onceavo,Dosceavo',
+            'semester'  => 'required|in:Primero,Segundo,Tercero,Cuarto,Quinto,Sexto,Septimo,Octavo,Noveno,Decimo,Onceavo,Doceavo',
             'plan'      => 'required|in:Diario,Fin de Semana',
             'course'    => 'required',
             'code'      => 'required'

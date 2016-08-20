@@ -17,7 +17,7 @@ class CreatePeopleTable extends Migration
             $table->string('name');
             $table->string('email');
             $table->string('phone');
-            $table->enum('semester', ['Primero', 'Segundo', 'Tercero', 'Cuarto', 'Quinto', 'Sexto', 'Septimo', 'Octabo', 'Noveno', 'Decimo', 'Onceavo', 'Dosceavo']);
+            $table->enum('semester', ['Primero', 'Segundo', 'Tercero', 'Cuarto', 'Quinto', 'Sexto', 'Septimo', 'Octavo', 'Noveno', 'Decimo', 'Onceavo', 'Doceavo']);
             $table->enum('plan', ['Diario', 'Fin de Semana']);
             $table->string('course');
             $table->integer('code_id')->unsigned();

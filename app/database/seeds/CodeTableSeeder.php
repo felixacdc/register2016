@@ -13,20 +13,20 @@ class CodeTableSeeder extends Seeder
      */
     public function run()
     {
-        $code = new Code;
-        $code->code = "1234";
-        $code->save();
+        // $code = new Code;
+        // $code->code = "1234";
+        // $code->save();
 
-        $code = new Code;
-        $code->code = "acdc";
-        $code->save();
+        // $code = new Code;
+        // $code->code = "acdc";
+        // $code->save();
 
-        $code = new Code;
-        $code->code = "metallica";
-        $code->save();
+        // $code = new Code;
+        // $code->code = "metallica";
+        // $code->save();
 
-        $code = new Code;
-        $code->code = "guns";
-        $code->save();
+        // $code = new Code;
+        // $code->code = "guns";
+        // $code->save();
     }
 }

@@ -9,9 +9,9 @@ return [
     'Quinto'    => 'Quinto', 
     'Sexto'     => 'Sexto', 
     'Septimo'   => 'Septimo', 
-    'Octabo'    => 'Octabo', 
+    'Octavo'    => 'Octavo', 
     'Noveno'    => 'Noveno', 
     'Decimo'    => 'Decimo', 
     'Onceavo'   => 'Onceavo', 
-    'Dosceavo'  => 'Dosceavo'
+    'Doceavo'  => 'Doceavo'
 ];

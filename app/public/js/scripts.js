@@ -107,7 +107,7 @@ $(document).ready(function() {
 
 // Opciones validas para el semestre
  function optionSemester(value, element, param) {
-     var options = ['Primero', 'Segundo', 'Tercero', 'Cuarto', 'Quinto', 'Sexto', 'Septimo', 'Octabo', 'Noveno', 'Decimo', 'Onceavo', 'Dosceavo'];
+     var options = ['Primero', 'Segundo', 'Tercero', 'Cuarto', 'Quinto', 'Sexto', 'Septimo', 'Octavo', 'Noveno', 'Decimo', 'Onceavo', 'Doceavo'];
 
      if ( options.indexOf(value) >= 0 ) {
          return true;
