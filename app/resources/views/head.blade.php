@@ -10,5 +10,6 @@
     {!! Html::style('css/animate.css') !!}
     {!! Html::style('css/materialize.css') !!}
     {!! Html::style('css/styles.css') !!}
+    {!! Html::style('css/font-awesome.min.css') !!}
 </head>
 <body id="top" class="scrollspy">

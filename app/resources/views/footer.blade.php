@@ -10,10 +10,16 @@
                 <h5 class="white-text">Redes Sociales</h5>
                 <ul>
                     <li>
-                        <a class="grey-text text-lighten-3" href="https://www.facebook.com/UMGINGREU/?__mref=message_bubble" target="_blank">Ingeniería en sistemas UMG</a>
+                        <a class="white-text" href="https://www.facebook.com/UMGINGREU/?__mref=message_bubble" target="_blank">
+                            <i class="small fa fa-facebook-square white-text"></i>
+                            Ingeniería en sistemas UMG
+                        </a>
                     </li>
                     <li>
-                        <a class="grey-text text-lighten-3" href="https://www.facebook.com/Universidad-Mariano-G%C3%A1lvez-Retalhuleu-1551307628525464/?__mref=message_bubble" target="_blank">Universidad Mariano Gálvez Retalhuleu</a>
+                        <a class="white-text" href="https://www.facebook.com/Universidad-Mariano-G%C3%A1lvez-Retalhuleu-1551307628525464/?__mref=message_bubble" target="_blank">
+                            <i class="small fa fa-facebook-square white-text"></i>
+                            UMG Retalhuleu
+                        </a>
                     </li>
                 </ul>
             </div>
