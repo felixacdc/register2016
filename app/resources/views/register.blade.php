@@ -44,7 +44,7 @@
                             {!! Form::label('code', 'Codigo', ['class' => 'white-text']) !!}
                         </div>
                         <div class="col s12 right-align wow bounceInLeft">
-                            <button class="btn waves-effect waves-light red darken-1" type="submit">Enviar
+                            <button class="btn waves-effect waves-light red darken-1" type="submit" name="enviar">Enviar
                                 <i class="material-icons right white-text">playlist_add</i>
                             </button>
                         </div>
