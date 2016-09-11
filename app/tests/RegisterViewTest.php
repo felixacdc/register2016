@@ -18,7 +18,8 @@ class RegisterViewTest extends TestCase
                 ->type('Auditoria de sistemas', 'course')
                 ->type('C4CA4238A0B923820DCC509A6F75849B', 'code')
                 ->press('enviar')
-                ->seePageIs('/');
+                ->seePageIs('/')
+                ->see('Juan Marino');
     }
 
     public function testDataView()
